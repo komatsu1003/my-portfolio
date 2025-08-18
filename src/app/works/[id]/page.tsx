@@ -1,6 +1,5 @@
-export const runtime = 'edge';
 'use client';
-
+export const runtime = 'edge';
 import { worksData } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
