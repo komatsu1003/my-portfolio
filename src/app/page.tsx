@@ -1,17 +1,17 @@
+import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ProfileSection from '@/components/ProfileSection';
 import SkillsSection from '@/components/SkillsSection';
-import WorksSection from '@/components/WorksSection';
-import ContactSection from '@/components/ContactSection';
+import TimelineSection from '@/components/TimelineSection';
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <HeroSection />
       <ProfileSection />
+      <TimelineSection />
       <SkillsSection />
-      <WorksSection />
-      <ContactSection />
     </>
   );
 }

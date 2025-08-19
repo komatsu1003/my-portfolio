@@ -1,29 +1,41 @@
 'use client';
+import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link'; // Linkをインポート
-import { worksData } from '@/lib/data'; // データのインポート元を変更
+import { worksData } from '@/lib/data';
 
-export default function WorksSection() {
+export default function WorksPage() {
     const cardVariants: Variants = {
         hidden: { opacity: 0, y: 50 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: {
-                duration: 0.6,
-                ease: 'easeInOut',
-            },
+            transition: { duration: 0.6, ease: 'easeInOut' },
         },
     };
 
     return (
-        <section className="py-20 px-8 bg-gray-800">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-12 text-white">
-                    Works
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <main className="min-h-screen bg-gray-900 text-white p-8">
+            {/* ナビバー */}
+            <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-50">
+                <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+                    <h1 className="text-lg font-bold">My Portfolio</h1>
+                    <ul className="flex space-x-6">
+                        <li>
+                            <Link href="/" className="hover:text-teal-400">
+                                Home
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            {/* ページタイトル */}
+            <h1 className="text-4xl font-bold text-center mt-20 mb-12">成果物一覧</h1>
+
+            {/* WorksSection */}
+            <section id="works" className="py-20 px-8 bg-gray-900">
+                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {worksData.map((work) => (
                         <Link href={`/works/${work.id}`} key={work.id}>
                             <motion.div
@@ -57,7 +69,7 @@ export default function WorksSection() {
                         </Link>
                     ))}
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
     );
 }

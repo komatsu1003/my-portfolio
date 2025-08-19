@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function ProfileSection() {
     return (
-        <section className="py-20 px-8 bg-gray-800">
+        <section id="profile" className="py-20 px-8 bg-gray-800">
             <motion.div
                 className="max-w-4xl mx-auto"
                 initial={{ opacity: 0, y: 50 }}
