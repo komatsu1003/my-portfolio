@@ -3,7 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import ProfileSection from '@/components/ProfileSection';
 import SkillsSection from '@/components/SkillsSection';
 import TimelineSection from '@/components/TimelineSection';
-
+import ContactsSection from '@/components/ContactsSection';
 export default function Home() {
   return (
     <>
@@ -12,6 +12,7 @@ export default function Home() {
       <ProfileSection />
       <TimelineSection />
       <SkillsSection />
+      <ContactsSection />
     </>
   );
 }

@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 
 export default function TimelineSection() {
     const events = [
-        { year: "2021", title: "大学入学", description: "情報工学を専攻し始めました。", link: "/works/1" },
-        { year: "2022", title: "個人開発", description: "React / Next.js を学習し、初めてのポートフォリオを作成。", link: "/works/2" },
-        { year: "2023", title: "インターン参加", description: "Web開発のインターンで実務経験を積みました。", link: "/works/3" },
-        { year: "2024", title: "インターン参加", description: "Web開発のインターンで実務経験を積みました。" } // linkなし
+        { year: "2020.04", title: "高校入学", description: "", link: "" },
+        { year: "2022.03", title: "Sechack365'21表現駆動コース修了", description: "1年間を通して、セキュリティに関連したプロダクトを作成するハッカソンを行なった。", link: "https://sechack365.nict.go.jp/achievement/2021/" },
+        { year: "2023.04", title: "大学入学", description: "専修大学ネットワーク情報学部ネットワーク情報学科に入学。" },
+        { year: "2023.04~", title: "長期インターン開始", description: "N中等部にて、プログラミングTAとして生徒にプログラミングを現在まで教えている。", link: "https://n-jr.jp/" },
+        { year: "2024.04", title: "専修大学電子計算機研究会の幹部に就任", description: "", },
+        { year: "2024.06.20", title: "学内の無人コンビニ「NEst.」設立に寄与", description: "コンビニでの商品データから、GASを用いたデータ分析を行なった。また、学内の卒業演習発表会時に教授へ向けて発表を行なった。", link: "https://www.senshu-u.ac.jp/news/nid00022792.html" },
+        { year: "2024.07.05", title: "ICPC 国内予選 2024 Yokohama 出場", description: "競技プログラミングの大会の予選に出場し、202位。", link: "https://www.senshu-u.ac.jp/news/nid00022792.html" }
     ];
 
     return (
