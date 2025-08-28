@@ -39,6 +39,7 @@ export default function SkillsSection() {
                             <img src="https://skillicons.dev/icons?theme=dark&i=git" alt="Git" />
                             <img src="https://skillicons.dev/icons?theme=dark&i=github" alt="GitHub" />
                             <img src="https://skillicons.dev/icons?theme=dark&i=vscode" alt="VSCode" />
+                            <img src="https://skillicons.dev/icons?theme=dark&i=photoshop" alt="Photoshop" />
                         </div>
                     </div>
                 </div>
