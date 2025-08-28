@@ -15,7 +15,7 @@ export default function ProfileSection() {
                     About Me
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed text-center">
-                    ここに自己紹介文を記述します。
+                    27卒情報系の学生エンジニア。大学ではデータサイエンスを専攻しながらも、EDPSの副代表を務め、学内でハッカソンの運営などもしています。
                 </p>
             </motion.div>
         </section>
