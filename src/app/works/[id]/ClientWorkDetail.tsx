@@ -24,20 +24,30 @@ export default function ClientWorkDetail({ id }: Props) {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
             >
-                <Link href="/#works" className="text-teal-400 hover:underline mb-8 inline-block">
+                {/* Back to Worksページ */}
+                <Link
+                    href="/works"
+                    className="text-teal-400 hover:underline mb-8 inline-block"
+                >
                     ← Back to Works
                 </Link>
 
+                {/* タイトル */}
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{work.title}</h1>
 
+                {/* タグ */}
                 <div className="flex flex-wrap gap-2 mb-8">
                     {work.tags.map((tag) => (
-                        <span key={tag} className="bg-teal-600 text-xs font-semibold px-3 py-1 rounded-full">
+                        <span
+                            key={tag}
+                            className="bg-teal-600 text-xs font-semibold px-3 py-1 rounded-full"
+                        >
                             {tag}
                         </span>
                     ))}
                 </div>
 
+                {/* 画像 */}
                 <Image
                     src={work.imageUrl}
                     alt={work.title}
@@ -46,18 +56,35 @@ export default function ClientWorkDetail({ id }: Props) {
                     className="w-full h-auto rounded-lg mb-8 shadow-lg"
                 />
 
-                <div className="prose prose-invert prose-lg max-w-none">
-                    <p>{work.longDescription}</p>
+                {/* セクション */}
+                <div className="mt-8 space-y-8">
+                    {work.sections.map((section) => (
+                        <div key={section.heading}>
+                            <h2 className="text-2xl font-bold mb-2">{section.heading}</h2>
+                            <p className="text-gray-300">{section.content}</p>
+                        </div>
+                    ))}
                 </div>
 
+                {/* GitHub / Demoボタン */}
                 <div className="mt-12 flex gap-4">
                     {work.githubUrl && (
-                        <a href={work.githubUrl} target="_blank" rel="noopener noreferrer" className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition-colors">
+                        <a
+                            href={work.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition-colors"
+                        >
                             GitHub
                         </a>
                     )}
                     {work.demoUrl && (
-                        <a href={work.demoUrl} target="_blank" rel="noopener noreferrer" className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 rounded transition-colors">
+                        <a
+                            href={work.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 rounded transition-colors"
+                        >
                             View Demo
                         </a>
                     )}
