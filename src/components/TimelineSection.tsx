@@ -12,7 +12,7 @@ export default function TimelineSection() {
         { year: "2024.06.20", title: "学内の無人コンビニ「NEst.」設立に寄与", description: "コンビニでの商品データから、GASを用いたデータ分析を行いました。また、学内の卒業演習発表会時に教授へ向けて発表を行いました。", link: "https://www.senshu-u.ac.jp/news/nid00022792.html" },
         { year: "2024.07.05", title: "ICPC 国内予選 2024 Yokohama 出場", description: "競技プログラミングの大会の予選に出場し、202位という結果となりました。", link: "https://www.senshu-u.ac.jp/news/nid00022792.html" },
         { year: "2024.10", title: "インターン先にて、ワークショップを企画・運営", description: "参加者は10人程度。事前に操作体験を交えたスライドを用意し、実際に手を動かしながら学べる形式にしたことで、参加者からは「分かりやすく楽しかった」と好評をいただきました。企画から運営までを通じて、限られた時間の中で理解してもらうための伝え方や進行管理の重要性を学びました。" },
-        { year: "2025.04", title: "あ", description: "競技プログラミングの大会の予選に出場し、202位という結果となった。", link: "https://www.senshu-u.ac.jp/news/nid00022792.html" }
+        // { year: "2025.04", title: "あ", description: "競技プログラミングの大会の予選に出場し、202位という結果となった。", link: "https://www.senshu-u.ac.jp/news/nid00022792.html" }
     ];
 
     return (
