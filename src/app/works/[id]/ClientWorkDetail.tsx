@@ -31,9 +31,12 @@ export default function ClientWorkDetail({ id }: Props) {
                 >
                     ← Back to Works
                 </Link>
+                {/* 日付 */}
+                <time className="text-sm text-teal-300 mb-2 block">{work.date}</time>
 
                 {/* タイトル */}
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{work.title}</h1>
+
 
                 {/* タグ */}
                 <div className="flex flex-wrap gap-2 mb-8">

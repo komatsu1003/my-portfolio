@@ -166,6 +166,7 @@ export default function WorksPage() {
                                         className="w-full h-48 object-cover"
                                     />
                                     <div className="p-6">
+                                        <time className="text-sm text-teal-300 mb-1 block">{work.date}</time>
                                         <h3 className="text-xl font-bold mb-2 text-white">{work.title}</h3>
                                         <p className="text-gray-300 mb-4">{work.description}</p>
                                         <div className="flex flex-wrap gap-2">

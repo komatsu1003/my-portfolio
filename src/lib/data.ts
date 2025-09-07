@@ -2,6 +2,7 @@ export const worksData = [
     {
         id: 1,
         title: 'ポートフォリオサイト',
+        date: '2025/09/03',
         description: '自身のスキルと制作物を紹介するためのWebサイト。',
         sections: [
             {
@@ -10,14 +11,14 @@ export const worksData = [
             },
             {
                 heading: '制作背景',
-                content: 'ポートフォリオサイトが古くなったため、React系技術で一から作り直しました。',
+                content: '私のポートフォリオを作成していなかったため、勉強も兼ねて作成。',
             },
             {
                 heading: '工夫した点',
                 content: 'Framer Motionでアニメーションをつけ、見た目だけでなくUXも向上させました。',
             },
         ],
-        imageUrl: 'https://placehold.jp/32/3d4059/ffffff/1200x800.png?text=Portfolio',
+        imageUrl: '/images/20240907data2.png',
         tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
         githubUrl: 'https://github.com/your-username/your-repo',
         demoUrl: null,
@@ -26,6 +27,7 @@ export const worksData = [
     {
         id: 2,
         title: 'タスク管理アプリ',
+        date: '2025/08/26',
         description: '日々のタスクを効率的に管理するアプリ。',
         sections: [
             {
