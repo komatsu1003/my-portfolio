@@ -1,10 +1,14 @@
 'use client';
 
-import { worksData } from '@/lib/data';
+import { worksData, SectionContent } from '@/lib/data';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 type Props = { id: string };
 
@@ -31,12 +35,12 @@ export default function ClientWorkDetail({ id }: Props) {
                 >
                     ← Back to Works
                 </Link>
+
                 {/* 日付 */}
                 <time className="text-sm text-teal-300 mb-2 block">{work.date}</time>
 
                 {/* タイトル */}
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{work.title}</h1>
-
 
                 {/* タグ */}
                 <div className="flex flex-wrap gap-2 mb-8">
@@ -50,21 +54,47 @@ export default function ClientWorkDetail({ id }: Props) {
                     ))}
                 </div>
 
-                {/* 画像 */}
-                <Image
-                    src={work.imageUrl}
-                    alt={work.title}
-                    width={1200}
-                    height={800}
-                    className="w-full h-auto rounded-lg mb-8 shadow-lg"
-                />
+                {/* 画像スライダー */}
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    navigation
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    loop
+                    className="rounded-lg mb-8 shadow-lg"
+                >
+                    {work.images.map((src, idx) => (
+                        <SwiperSlide key={idx}>
+                            <img
+                                src={src}
+                                alt={`${work.title} screenshot ${idx + 1}`}
+                                className="w-full h-auto rounded-lg"
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
 
                 {/* セクション */}
                 <div className="mt-8 space-y-8">
                     {work.sections.map((section) => (
                         <div key={section.heading}>
                             <h2 className="text-2xl font-bold mb-2">{section.heading}</h2>
-                            <p className="text-gray-300">{section.content}</p>
+
+                            {typeof section.content === 'string' ? (
+                                <p className="text-gray-300">{section.content}</p>
+                            ) : (
+                                section.content.map((block, idx) => (
+                                    <div key={idx} className="mb-3">
+                                        <h3 className="text-xl font-semibold mb-1">{block.subheading}</h3>
+                                        <ul className="list-disc list-inside text-gray-300">
+                                            {block.items.map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))
+                            )}
                         </div>
                     ))}
                 </div>

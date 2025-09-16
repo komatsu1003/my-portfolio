@@ -10,6 +10,7 @@ export default function WorksPage() {
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
     const [tagFilterMode, setTagFilterMode] = useState<'AND' | 'OR'>('OR');
     const [showFilter, setShowFilter] = useState(false);
+    const [sortMode, setSortMode] = useState<'dateDesc' | 'dateAsc'>('dateDesc');
 
     const allTags = Array.from(new Set(worksData.flatMap((work) => work.tags)));
 
@@ -19,6 +20,7 @@ export default function WorksPage() {
         );
     };
 
+    // フィルター
     const filteredWorks = useMemo(() => {
         return worksData.filter((work) => {
             const matchesSearch = search
@@ -36,6 +38,17 @@ export default function WorksPage() {
             return matchesSearch && matchesTag;
         });
     }, [search, selectedTags, tagFilterMode]);
+
+    // 並び替え
+    const sortedWorks = useMemo(() => {
+        const works = [...filteredWorks];
+        if (sortMode === 'dateDesc') {
+            works.sort((a, b) => (b.date > a.date ? 1 : -1));
+        } else if (sortMode === 'dateAsc') {
+            works.sort((a, b) => (a.date > b.date ? 1 : -1));
+        }
+        return works;
+    }, [filteredWorks, sortMode]);
 
     return (
         <main className="min-h-screen bg-gray-900 text-white p-8">
@@ -65,6 +78,7 @@ export default function WorksPage() {
                     </button>
                 </div>
             </div>
+
             {/* フィルター領域 */}
             <div className="max-w-6xl mx-auto mb-8">
                 <AnimatePresence initial={false}>
@@ -137,6 +151,34 @@ export default function WorksPage() {
                                     OR
                                 </button>
                             </motion.div>
+
+                            {/* 並び替え */}
+                            <motion.div
+                                className="flex items-center gap-4 mt-2"
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                            >
+                                <span>並び替え:</span>
+                                <button
+                                    className={`px-3 py-1 rounded-full font-semibold ${sortMode === 'dateDesc'
+                                        ? 'bg-teal-500 text-white'
+                                        : 'bg-gray-700 text-gray-300 hover:bg-teal-500 hover:text-white'
+                                        }`}
+                                    onClick={() => setSortMode('dateDesc')}
+                                >
+                                    制作日 降順
+                                </button>
+                                <button
+                                    className={`px-3 py-1 rounded-full font-semibold ${sortMode === 'dateAsc'
+                                        ? 'bg-teal-500 text-white'
+                                        : 'bg-gray-700 text-gray-300 hover:bg-teal-500 hover:text-white'
+                                        }`}
+                                    onClick={() => setSortMode('dateAsc')}
+                                >
+                                    制作日 昇順
+                                </button>
+                            </motion.div>
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -146,7 +188,7 @@ export default function WorksPage() {
             <section id="works" className="py-8 px-4">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <AnimatePresence>
-                        {filteredWorks.map((work) => (
+                        {sortedWorks.map((work) => (
                             <motion.div
                                 layout
                                 key={work.id}
@@ -159,7 +201,7 @@ export default function WorksPage() {
                             >
                                 <Link href={`/works/${work.id}`}>
                                     <Image
-                                        src={work.imageUrl}
+                                        src={work.images[0]}
                                         alt={work.title}
                                         width={600}
                                         height={400}
@@ -183,7 +225,7 @@ export default function WorksPage() {
                                 </Link>
                             </motion.div>
                         ))}
-                        {filteredWorks.length === 0 && (
+                        {sortedWorks.length === 0 && (
                             <motion.p
                                 className="text-center text-gray-400 col-span-full mt-8"
                                 initial={{ opacity: 0 }}
