@@ -31,7 +31,7 @@ export type Work = {
 
 // 自分が担当した部分（フロント・バック・設計など）
 
-// 工夫した点（技術的挑戦・UX改善・パフォーマンスなど）
+// 工夫した点（技術的挑戦・UX改善・パフォーマンス・既存サービスとの差別化点など）
 
 // 使用技術
 
@@ -95,32 +95,31 @@ export const worksData = [
         demoUrl: null,
     },
 
+    // {
+    //     id: 2,
+    //     title: 'Willers',
+    //     date: '2025/08/26',
+    //     description: '友達との日記共有サービス',
+    //     sections: [
+    //         {
+    //             heading: '概要',
+    //             content: 'ReactとFirebaseを使い、リアルタイムでタスクを同期できるアプリ。',
+    //         },
+    //         {
+    //             heading: '工夫した点',
+    //             content: 'ユーザー認証機能を実装し、個人ごとにタスクを管理可能にしました。',
+    //         },
+    //     ],
+    //     images: [
+    //         "/images/sechack365_2021.jpg",
+    //     ],
+    //     tags: ['React', 'Firebase', 'Material-UI', 'Java'],
+    //     githubUrl: 'https://github.com/your-username/your-repo',
+    //     demoUrl: 'https://example.com',
+    // },
     {
         id: 2,
-        title: 'タスク管理アプリ',
-        date: '2025/08/26',
-        description: '日々のタスクを効率的に管理するアプリ。',
-        sections: [
-            {
-                heading: '概要',
-                content: 'ReactとFirebaseを使い、リアルタイムでタスクを同期できるアプリ。',
-            },
-            {
-                heading: '工夫した点',
-                content: 'ユーザー認証機能を実装し、個人ごとにタスクを管理可能にしました。',
-            },
-        ],
-        images: [
-            "/images/college.png",
-            "/images/20240907data2.png",
-        ],
-        tags: ['React', 'Firebase', 'Material-UI', 'Java'],
-        githubUrl: 'https://github.com/your-username/your-repo',
-        demoUrl: 'https://example.com',
-    },
-    {
-        id: 3,
-        title: 'タスク管理アプリ',
+        title: 'コンビニの在庫管理シート',
         date: '2025/09/26',
         description: '日々のタスクを効率的に管理するアプリ。',
         sections: [
