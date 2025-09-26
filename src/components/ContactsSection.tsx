@@ -8,7 +8,7 @@ export default function ContactsSection() {
                 <div className="flex justify-center gap-8 flex-wrap">
                     {/* Gmail */}
                     <a
-                        href="mailto:example@gmail.com"
+                        href="mailto:komaken4649@gmail.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transform transition-transform hover:scale-110"
@@ -22,7 +22,7 @@ export default function ContactsSection() {
 
                     {/* X (Twitter) */}
                     <a
-                        href="https://x.com/yourusername"
+                        href="https://x.com/Dmino_1003"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transform transition-transform hover:scale-110"
@@ -36,7 +36,7 @@ export default function ContactsSection() {
 
                     {/* GitHub */}
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/komatsu1003"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transform transition-transform hover:scale-110"
@@ -50,7 +50,7 @@ export default function ContactsSection() {
 
                     {/* Qiita（公式アイコンはskilliconsに無いので代替） */}
                     <a
-                        href="https://qiita.com/yourusername"
+                        href="https://qiita.com/kensei1003"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transform transition-transform hover:scale-110"
