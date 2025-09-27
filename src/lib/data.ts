@@ -156,7 +156,7 @@ export const worksData = [
     {
         id: 3,
         title: 'dino-game',
-        date: '2023/12/27',
+        date: '2023/09/12',
         description: 'JavaScriptで再現した接続待ちの時にやるあのゲーム',
         sections: [
             {
