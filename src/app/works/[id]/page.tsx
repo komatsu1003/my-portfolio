@@ -14,3 +14,4 @@ type WorkDetailPageProps = {
 export default function WorkDetailPage({ params }: WorkDetailPageProps) {
     return <ClientWorkDetail id={params.id} />;
 }
+// temp

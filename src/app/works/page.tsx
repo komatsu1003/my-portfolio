@@ -103,7 +103,7 @@ export default function WorksPage() {
                                 transition={{ delay: 0.05 }}
                             />
 
-                            {/* タグ選択 */}
+                            {/* タグの選択 */}
                             <motion.div
                                 className="flex flex-wrap gap-2"
                                 initial={{ opacity: 0, y: -10 }}

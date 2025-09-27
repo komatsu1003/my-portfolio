@@ -54,7 +54,7 @@ export default function ClientWorkDetail({ id }: Props) {
                     ))}
                 </div>
 
-                {/* 画像スライダー */}
+                {/* 画像スライダ */}
                 <Swiper
                     modules={[Navigation, Pagination]}
                     navigation
