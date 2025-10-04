@@ -90,7 +90,7 @@ export const worksData = [
         images: [
             "/images/id1/20240907data2.png",
         ],
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発'],
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発', '自主制作'],
         githubUrl: 'https://github.com/komatsu1003/my-portfolio',
         demoUrl: null,
     },
@@ -139,15 +139,6 @@ export const worksData = [
             "/images/id2/image2.png",
             "/images/id2/image3.png",
             "/images/id2/image4.png",
-            "/images/id2/image5.png",
-            "/images/id2/image6.png",
-            "/images/id2/image7.png",
-            "/images/id2/image8.png",
-            "/images/id2/image9.png",
-            "/images/id2/image10.png",
-            "/images/id2/image11.png",
-            "/images/id2/image12.png",
-            "/images/id2/image13.png",
         ],
         tags: ['Processing', '個人開発', '講義',],
         githubUrl: 'https://github.com/komatsu1003/Escape-Game',
@@ -198,8 +189,97 @@ export const worksData = [
             "/images/id3/image2.png",
             "/images/id3/image3.png",
         ],
-        tags: ['HTML/CSS', 'JavaScript', 'Canvas API', '個人開発',],
+        tags: ['HTML/CSS', 'JavaScript', 'Canvas API', '個人開発', '自主制作'],
         githubUrl: 'https://github.com/komatsu1003/dino-game',
         demoUrl: 'https://komatsu1003.github.io/dino-game/',
+    },
+    {
+        id: 4,
+        title: '水風船のスリットアニメーション',
+        date: '2023/06/12',
+        description: 'グリッドの移動で躍動的に動く水風船を作成しました。',
+        sections: [
+            {
+                heading: '概要',
+                content: 'GIMPで作成したデジタルスリットアニメーション。4枚の静止画を縦ストライプ状に切り出し、それを移動させることで、あたかも画像が動いているように見せる手法を用いています。',
+            },
+            {
+                heading: '制作背景',
+                content: '講義内にてアニメーション作品を自由に作成し提出するというものがあり、私はスリットアニメーションというものがPCで再現できると知り作成しました。',
+            },
+            {
+                heading: '開発期間',
+                content: '2023/06/08 ~ 2023/06/12',
+            },
+            {
+                heading: '使用技術',
+                content: [
+                    {
+                        subheading: '画像編集・レイヤー操作',
+                        items: ['GIMP'],
+                    },
+                    {
+                        subheading: 'デプロイ先',
+                        items: ['Youtube'],
+                    }
+                ],
+            },
+            {
+                heading: '制作した感想',
+                content: '静止画の集合から動きを生み出すアニメーション表現の面白さを実感しました。アナログ手法をデジタルで再現する際の難しさを知り、表現の幅を広げる学びとなった。また、自主的に調べて試行錯誤することで、制作のプロセス自体も貴重な経験になりました。',
+            },
+        ],
+        images: [
+            "/images/id4/image1.png",
+        ],
+        tags: ['GIMP', '講義', 'アニメーション', '個人開発'],
+        demoUrl: 'https://youtu.be/mMEBRwy5mx8',
+    },
+    {
+        id: 5,
+        title: 'リアルタイム顔認証システム',
+        date: '2025/09/03',
+        description: 'パーソルクロステクノロジー1dayインターンでの制作物',
+        sections: [
+            {
+                heading: '概要',
+                content: 'Python',
+            },
+            {
+                heading: '制作背景',
+                content: '',
+            },
+            {
+                heading: '開発期間',
+                content: '2024/08 ~',
+            },
+            {
+                heading: '使用技術',
+                content: [
+                    {
+                        subheading: 'フロントエンド',
+                        items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Swiper.js', 'Next/Image'],
+                    },
+                    {
+                        subheading: '開発ツール・環境',
+                        items: ['VSCode', 'Node.js', 'npm / pnpm / yarn', 'ESLint / Prettier'],
+                    },
+                    {
+                        subheading: 'デプロイ先',
+                        items: ['Cloudflare Pages'],
+                    },
+                ],
+            },
+            {
+                heading: '工夫した点',
+                content: 'Framer Motionでアニメーションをつけ、見た目だけでなくUXも向上させました。また、Filter機能をつけることで保守性を高めました。',
+            },
+        ],
+        images: [
+            "/images/id1/20240907data2.png",
+        ],
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発', '自主制作'],
+        githubUrl: 'https://github.com/komatsu1003/my-portfolio',
+        demoUrl: null,
     },
 ];
