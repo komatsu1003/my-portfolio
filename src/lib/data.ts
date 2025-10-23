@@ -238,47 +238,39 @@ export const worksData = [
     {
         id: 5,
         title: 'リアルタイム顔認証システム',
-        date: '2025/09/03',
-        description: 'パーソルクロステクノロジー1dayインターンでの制作物',
+        date: '2025/06/28',
+        description: 'Google Colab上で動作するリアルタイム顔認識システム。',
         sections: [
             {
                 heading: '概要',
-                content: 'Python',
-            },
-            {
-                heading: '制作背景',
-                content: '',
+                content: 'パーソルクロステクノロジー1dayインターンでの制作物です。Google Colab上で動作し、OpenCVのDNNモジュールとCaffeモデルを用い、Webカメラ映像から顔を検出・表示しています。ブラウザからのカメラ入力をPythonで処理し、リアルタイムで結果を返す仕組みを構築しました。',
             },
             {
                 heading: '開発期間',
-                content: '2024/08 ~',
+                content: '2025/6/28',
             },
             {
                 heading: '使用技術',
                 content: [
                     {
-                        subheading: 'フロントエンド',
-                        items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Swiper.js', 'Next/Image'],
+                        subheading: '主要ライブラリ',
+                        items: ['OpenCV', 'imutils', 'numpy', 'base64', 'Caffe model (ResNet SSD)'],
                     },
                     {
                         subheading: '開発ツール・環境',
-                        items: ['VSCode', 'Node.js', 'npm / pnpm / yarn', 'ESLint / Prettier'],
-                    },
-                    {
-                        subheading: 'デプロイ先',
-                        items: ['Cloudflare Pages'],
+                        items: ['Google Colab', 'Python', 'Google Drive（Colabとの連携用）'],
                     },
                 ],
             },
             {
-                heading: '工夫した点',
-                content: 'Framer Motionでアニメーションをつけ、見た目だけでなくUXも向上させました。また、Filter機能をつけることで保守性を高めました。',
-            },
+                heading: '得られた学び',
+                content: 'このリアルタイム顔認識システムを制作する過程で、PythonとOpenCVを用いた画像処理の扱い方を実践的に学ぶことができました。',
+            }
         ],
         images: [
-            "/images/id1/20240907data2.png",
+            "/images/id5/image1.png",
         ],
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発', '自主制作'],
+        tags: ['Python', '個人開発', 'インターン'],
         githubUrl: 'https://github.com/komatsu1003/my-portfolio',
         demoUrl: null,
     },
