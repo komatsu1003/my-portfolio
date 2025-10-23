@@ -17,6 +17,7 @@ export default function TimelineSection() {
         { date: "2025.04.01", title: "ITパスポート取得", description: "", },
         { date: "2025.04.12", title: "学生団体交流会【春】に参加", description: "株式会社サポーターズ主催の学生団体交流会に参加しました。", link: "https://talent.supporterz.jp/events/ade10524-56e7-4e56-aebf-eac483bb6848/" },
         { date: "2025.05.23", title: "学内向けハッカソンの開催", description: "「ゲームを作ろう」をテーマに学内向けの初心者を対象とした学部を問わずに約10名を集め、1日完結型のハッカソンを開催しました。企画から制作・発表までを行い、交流と学びの場を提供しました。", link: "https://project.ne.senshu-u.ac.jp/2025/03/" },
+        { date: "2025.06.28", title: "パーソルクロステクノロジー1dayインターン参加" },
         { date: "2025.09.29", title: "学生団体交流会【秋】に参加", description: "株式会社サポーターズ主催の学生団体交流会に参加しました。", link: "https://talent.supporterz.jp/events/ade10524-56e7-4e56-aebf-eac483bb6848/" },
         // { date: "yyyy.mm.dd", title: "", description: "", link: "" },
     ];
