@@ -16,7 +16,8 @@ export type Work = {
     images: string[]; // 必ず配列
     tags: string[];
     githubUrl: string;
-    demoUrl: string | null;
+    demoUrl?: string | null;
+    slideUrl?: string | null;
 };
 
 // 以下、セクションでの項目例
@@ -90,9 +91,8 @@ export const worksData = [
         images: [
             "/images/id1/20240907data2.png",
         ],
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発', '自主制作'],
-        githubUrl: 'https://github.com/komatsu1003/my-portfolio',
-        demoUrl: null,
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発'],
+        githubUrl: 'https://github.com/komatsu1003/my-portfolio'
     },
     {
         id: 2,
@@ -141,8 +141,7 @@ export const worksData = [
             "/images/id2/image4.png",
         ],
         tags: ['Processing', '個人開発', '講義',],
-        githubUrl: 'https://github.com/komatsu1003/Escape-Game',
-        demoUrl: null,
+        githubUrl: 'https://github.com/komatsu1003/Escape-Game'
     },
     {
         id: 3,
@@ -189,7 +188,7 @@ export const worksData = [
             "/images/id3/image2.png",
             "/images/id3/image3.png",
         ],
-        tags: ['HTML/CSS', 'JavaScript', 'Canvas API', '個人開発', '自主制作'],
+        tags: ['HTML/CSS', 'JavaScript', 'Canvas API', '個人開発'],
         githubUrl: 'https://github.com/komatsu1003/dino-game',
         demoUrl: 'https://komatsu1003.github.io/dino-game/',
     },
@@ -243,7 +242,7 @@ export const worksData = [
         sections: [
             {
                 heading: '概要',
-                content: 'パーソルクロステクノロジー1dayインターンでの制作物です。Google Colab上で動作し、OpenCVのDNNモジュールとCaffeモデルを用い、Webカメラ映像から顔を検出・表示しています。ブラウザからのカメラ入力をPythonで処理し、リアルタイムで結果を返す仕組みを構築しました。',
+                content: 'パーソルクロステクノロジー1dayインターンでの制作物です。Google Colab上で動作し、顔を検出・表示しています。ブラウザからのカメラ入力をPythonで処理し、リアルタイムで結果を返す仕組みを構築しました。',
             },
             {
                 heading: '開発期間',
@@ -254,11 +253,11 @@ export const worksData = [
                 content: [
                     {
                         subheading: '主要ライブラリ',
-                        items: ['OpenCV', 'imutils', 'numpy', 'base64', 'Caffe model (ResNet SSD)'],
+                        items: ['discord.py', 'asyncio', 'emoji', 'random'],
                     },
                     {
                         subheading: '開発ツール・環境',
-                        items: ['Google Colab', 'Python', 'Google Drive（Colabとの連携用）'],
+                        items: ['VScode', 'Python', 'ChatGPT'],
                     },
                 ],
             },
@@ -271,7 +270,90 @@ export const worksData = [
             "/images/id5/image1.png",
         ],
         tags: ['Python', '個人開発', 'インターン'],
-        githubUrl: 'https://github.com/komatsu1003/my-portfolio',
-        demoUrl: null,
+        githubUrl: 'https://github.com/komatsu1003/Persol-intern'
+    },
+    {
+        id: 6,
+        title: 'DiscordDuelBot',
+        date: '2024/06/28',
+        description: 'Hack-a-SEN優秀賞受賞作品',
+        sections: [
+            {
+                heading: '概要',
+                content: 'Discord上で2人のプレイヤーがリアクション操作によって対戦できる、ターン制バトルBotです。プレイヤーは「戦士」「魔法使い」「狩人」からクラスを選択し、それぞれ異なるステータスとスキルを駆使して戦います。攻撃やスキルはリアクションボタンで選択し、HPが0になったプレイヤーが敗北となります。テキストチャンネルで進行する手軽なゲームとして、友人同士で楽しめるBotを目指しました。',
+            },
+            {
+                heading: '開発期間',
+                content: '2024/11/09 ~ 2024/11/10',
+            },
+            {
+                heading: '使用技術',
+                content: [
+                    {
+                        subheading: '主要ライブラリ',
+                        items: ['discord.py', 'asyncio', 'emoji', 'random'],
+                    },
+                    {
+                        subheading: '開発ツール・環境',
+                        items: ['VSCode', 'Python', 'macOS', 'Discord API（Botトークン連携）'],
+                    },
+                ],
+            },
+            {
+                heading: '作成してみて',
+                content: 'Discord Botを今までに作成したことがなく、わからないことが多かったが恊働での開発でどのように進めていくかを話し、納得のいく物が作ることができました。また、Discord API活用や拡張性を意識した設計で、実践的なBot開発の知見を得ることができました。'
+            }
+        ],
+        images: [
+            "/images/id6/image1.png",
+        ],
+        tags: ['Python', 'チーム開発', 'Bot開発', 'ハッカソン'],
+        githubUrl: 'https://github.com/komatsu1003/1v1Discordbot',
+        demoUrl: 'https://youtu.be/IZloPmxBuyI',
+        slideUrl: 'https://docs.google.com/presentation/d/1gBoRhIJFPGH_LWq_Lpi4ohQS_J3yiZz2pcMH964y2pc/edit?slide=id.p#slide=id.p'
+    },
+    {
+        id: 7,
+        title: '色検索アプリ',
+        date: '2024/05/21 ~ ',
+        description: 'ローカルライブラリにある画像を色で検索することができるスマホ向けアプリ',
+        sections: [
+            {
+                heading: '概要',
+                content: 'スマートフォン内の膨大な写真ライブラリから、「特定の色」をキーに画像を検索するFlutter製モバイルアプリケーションです。',
+            },
+            {
+                heading: '開発期間',
+                content: '2024/05/21 ~',
+            },
+            {
+                heading: '使用技術',
+                content: [
+                    {
+                        subheading: '言語・フレームワーク',
+                        items: ['Dart', 'Flutter Framework']
+                    },
+                    {
+                        subheading: '主要ライブラリ',
+                        items: ['photo_manager (ローカル画像アクセス)', 'image', 'flutter_material_color_picker']
+                    },
+                    {
+                        subheading: '開発ツール・環境',
+                        items: ['VSCode', 'Flutter SDK', 'Xcode (iOSシミュレータ)', 'macOS']
+                    }
+                ],
+            },
+            {
+                heading: '作成してみて',
+                content: '「特定の色の写真を探したい」という自身の課題を解決するために開発しました。当初、全ピクセルを走査するアルゴリズムでは動作が重く、実用性に大きな課題がありました。速度改善のため「平均色」を導入しましたが、今度は「赤色の花」の写真がヒットしないなど、機械の計算と人間の感覚のズレという新たな問題に直面しました。その原因を分析し、RGB色空間から人間の知覚に近い「HSV色空間」での判定アルゴリズムに再設計することで、処理速度と検索精度の両立に成功しました。仮説と検証を繰り返し、アルゴリズムを改善していく実践的なプロセスを深く学ぶことができました。'
+            }
+        ],
+        images: [
+            "/images/id7/image1.png",
+            "/images/id7/image2.png",
+        ],
+        tags: ['Flutter', 'Dart', '個人開発', '画像処理', 'モバイルアプリ'],
+        githubUrl: 'https://github.com/komatsu1003/flutter-photo-search',
+        demoUrl: 'https://youtube.com/shorts/j-jNRwy_0I8?feature=share',
     },
 ];

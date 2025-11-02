@@ -99,7 +99,7 @@ export default function ClientWorkDetail({ id }: Props) {
                     ))}
                 </div>
 
-                {/* GitHub / Demoボタン */}
+                {/* GitHub / Demoボタン / Slide */}
                 <div className="mt-12 flex gap-4">
                     {work.githubUrl && (
                         <a
@@ -119,6 +119,16 @@ export default function ClientWorkDetail({ id }: Props) {
                             className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 rounded transition-colors"
                         >
                             View Demo
+                        </a>
+                    )}
+                    {work.slideUrl && (
+                        <a
+                            href={work.slideUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-yellow-600 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded transition-colors"
+                        >
+                            View Slide
                         </a>
                     )}
                 </div>
