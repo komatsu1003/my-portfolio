@@ -62,15 +62,26 @@ export default function ClientWorkDetail({ id }: Props) {
                     spaceBetween={20}
                     slidesPerView={1}
                     loop
-                    className="rounded-lg mb-8 shadow-lg"
+                    centeredSlides={true}          // スライド自体を中央に
+                    className="rounded-lg mb-8 shadow-lg bg-gray-800"
                 >
                     {work.images.map((src, idx) => (
-                        <SwiperSlide key={idx}>
-                            <img
-                                src={src}
-                                alt={`${work.title} screenshot ${idx + 1}`}
-                                className="w-full h-auto rounded-lg"
-                            />
+                        <SwiperSlide
+                            key={idx}
+                            // swiper-slide に flex 中央寄せを確実に付与
+                            className="flex justify-center items-center"
+                            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                        >
+                            {/* ラッパーで横幅いっぱいを確保しつつ中央に配置 */}
+                            <div className="flex justify-center items-center w-full">
+                                <img
+                                    src={src}
+                                    alt={`${work.title} screenshot ${idx + 1}`}
+                                    // block + w-auto で自然な比率、max高さで抑える
+                                    className="block max-h-[600px] w-auto object-contain rounded-lg"
+                                    style={{ margin: '0 auto', maxHeight: '600px' }}
+                                />
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
