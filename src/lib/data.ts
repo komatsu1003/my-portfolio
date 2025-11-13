@@ -15,7 +15,7 @@ export type Work = {
     sections: { heading: string; content: string }[];
     images: string[]; // 必ず配列
     tags: string[];
-    githubUrl: string;
+    githubUrl?: string | null;
     demoUrl?: string | null;
     slideUrl?: string | null;
 };
@@ -51,7 +51,7 @@ export const worksData = [
     {
         id: 1,
         title: 'ポートフォリオサイト',
-        date: '2025/09/03',
+        date: '2025/09/03 ~',
         description: '自身のスキルと制作物を紹介するためのWebサイト。',
         sections: [
             {
@@ -91,7 +91,7 @@ export const worksData = [
         images: [
             "/images/id1/20240907data2.png",
         ],
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発'],
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React', '個人開発', 'Webサイト'],
         githubUrl: 'https://github.com/komatsu1003/my-portfolio'
     },
     {
@@ -355,5 +355,50 @@ export const worksData = [
         tags: ['Flutter', 'Dart', '個人開発', '画像処理', 'モバイルアプリ'],
         githubUrl: 'https://github.com/komatsu1003/flutter-photo-search',
         demoUrl: 'https://youtube.com/shorts/j-jNRwy_0I8?feature=share',
+    },
+    {
+        id: 8,
+        title: 'プロジェクトサイト',
+        date: '2025/',
+        description: '学内ハッカソンの公式ホームページ',
+        sections: [
+            {
+                heading: '概要',
+                content: '大学のプロジェクトで制作した、ハッカソン運営チームの公式Webサイト。フルスクリーンのスクロールスナップ、マウス追従型のアニメーション、CSSによるタイプライターエフェクト、カルーセルなど、インタラクティブな要素を多数盛り込んだシングルページアプリケーション（SPA）として構築しました。',
+            },
+            {
+                heading: '開発期間',
+                content: '2024/05/21 ~',
+            },
+            {
+                heading: '使用技術',
+                content: [
+                    {
+                        subheading: '言語・フレームワーク',
+                        items: ['TypeScript', 'React.js', 'Sass (SCSS)']
+                    },
+                    {
+                        subheading: '主要ライブラリ',
+                        items: ['MUI Joy UI', 'react-scroll', 'GSAP (GreenSock)', 'Swiper.js', 'Framer Motion']
+                    },
+                    {
+                        subheading: '開発ツール・環境',
+                        items: ['Vite', 'npm', 'VSCode', 'Git / GitHub', 'Azure Static Web Apps']
+                    }
+                ],
+            },
+            {
+                heading: '作成してみて',
+                content: 'ハッカソンの顔となる、閲覧者の印象に残る公式ウェブサイトを目指して開発しました。私は主にページ構成を担当し、ローディング画面およびハッカソンの記載内容は他のチームメンバーが担当しました。当初は簡素な構成でしたが、全画面スクロールやマウスの動きに連動した演出など、複数の視覚効果を同時に組み込む過程で、技術的な課題に直面しました。特に、異なる外部機能（ライブラリ）同士の干渉や、要素の重なり順による表示崩れといった問題が発生しました。これらを解決するために、画面の状態を一元管理する仕組みを構築し、「現在どの画面を見ているか」に応じて、各要素の表示を適切に切り替える処理を実装しました。単に機能を配置するだけでなく、複数の技術を調整・連携させ、利用者にとって心地よい操作体験を作り上げる設計力を養うことができました。また、プライバシー保護の観点からリポジトリは非公開となっていますが作成したWebサイトは以下のリンクから閲覧することができます。'
+            }
+        ],
+        images: [
+            "/images/id8/image1.png",
+            "/images/id8/image2.png",
+            "/images/id8/image3.png",
+            "/images/id8/image4.png",
+        ],
+        tags: ['React', 'TypeScript', 'チーム開発', 'Webサイト', '講義'],
+        demoUrl: 'https://project.ne.senshu-u.ac.jp/2025/03/',
     },
 ];
